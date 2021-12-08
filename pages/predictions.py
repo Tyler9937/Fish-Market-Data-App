@@ -1,5 +1,4 @@
 # Imports from 3rd party libraries
-import dash
 import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
@@ -16,6 +15,7 @@ from app import app
 df = pd.read_csv('./data/Fish.csv')
 df['Volume'] = df['Length3'] * df['Height'] * df['Width']
 model = ols('Weight ~ Volume + Length1 + Length2 + Length3 + Height + Width', data=df).fit()
+
 
 # Creating sliders for data input
 length1_slider = html.Div(
@@ -53,6 +53,7 @@ width_slider = html.Div(
     ]
 )
 
+
 column1 = dbc.Col(
     [
         dcc.Markdown(
@@ -60,7 +61,7 @@ column1 = dbc.Col(
 
             ## Predictions
 
-            This applicaiton allows you to predict fish weight (g) given length (cm) measurments.
+            This application allows you to predict fish weight (g) given length (cm) measurements.
             The predictive model used is a Linear Regression model in this case Ordinary Least Squares.
 
             """
@@ -79,7 +80,7 @@ column1 = dbc.Col(
 column2 = dbc.Col(
     [
         html.H1("Estimated Fish Weight...", style={"text-align": "center", "color": "rgb(108,108,108)"}),
-        html.H1(id="example-output", style={"text-align": "center", "color": "rgb(17,157,255)"})
+        html.H1(id="example-output", style={"text-align": "center", "color": "rgb(17,157,255)"}),
     ]
 )
 

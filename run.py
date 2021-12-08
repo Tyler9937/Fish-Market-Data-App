@@ -9,9 +9,8 @@ from dash.dependencies import Input, Output
 from app import app, server
 from pages import index, predictions, insights, process
 
-# Navbar docs: https://dash-bootstrap-components.opensource.faculty.ai/l/components/navbar
 navbar = dbc.NavbarSimple(
-    brand='YOUR APP NAME',
+    brand='Fish Market Data Analysis',
     brand_href='/', 
     children=[
         dbc.NavItem(dcc.Link('Predictions', href='/predictions', className='nav-link')), 
@@ -35,29 +34,22 @@ footer = dbc.Container(
         dbc.Col(
             html.P(
                 [
-                    html.Span('Your Name', className='mr-2'), 
-                    html.A(html.I(className='fas fa-envelope-square mr-1'), href='mailto:<you>@<provider>.com', style={
+                    html.Span('Tyler Russin', className='mr-2'), 
+                    html.A(html.I(className='fas fa-envelope-square mr-1'), href='mailto:tylerrussin2@gmail.com', style={
+                                                                                                                        "padding-top": "2px",
+                                                                                                                        "padding-right": "2px",
+                                                                                                                        "padding-bottom": "2px",
+                                                                                                                        "padding-left": "10px",
+                                                                                                                        "color": "rgb(17,157,255)"
+                                                                                                                        }), 
+                    html.A(html.I(className='fab fa-github-square mr-1'), href='https://github.com/tyler9937/Fish-Market-Data-App', style={
                                                                                                                         "padding-top": "2px",
                                                                                                                         "padding-right": "2px",
                                                                                                                         "padding-bottom": "2px",
                                                                                                                         "padding-left": "2px",
                                                                                                                         "color": "rgb(17,157,255)"
                                                                                                                         }), 
-                    html.A(html.I(className='fab fa-github-square mr-1'), href='https://github.com/<you>/<repo>', style={
-                                                                                                                        "padding-top": "2px",
-                                                                                                                        "padding-right": "2px",
-                                                                                                                        "padding-bottom": "2px",
-                                                                                                                        "padding-left": "2px",
-                                                                                                                        "color": "rgb(17,157,255)"
-                                                                                                                        }), 
-                    html.A(html.I(className='fab fa-linkedin mr-1'), href='https://www.linkedin.com/in/<you>/', style={
-                                                                                                                        "padding-top": "2px",
-                                                                                                                        "padding-right": "2px",
-                                                                                                                        "padding-bottom": "2px",
-                                                                                                                        "padding-left": "2px",
-                                                                                                                        "color": "rgb(17,157,255)"
-                                                                                                                        }), 
-                    html.A(html.I(className='fab fa-twitter-square mr-1'), href='https://twitter.com/<you>', style={
+                    html.A(html.I(className='fab fa-linkedin mr-1'), href='https://www.linkedin.com/in/tyler-russin/', style={
                                                                                                                         "padding-top": "2px",
                                                                                                                         "padding-right": "2px",
                                                                                                                         "padding-bottom": "2px",
@@ -99,6 +91,6 @@ def display_page(pathname):
     else:
         return dcc.Markdown('## Page not found')
 
-# Run app server: https://dash.plot.ly/getting-started
+# Run app
 if __name__ == '__main__':
     app.run_server(debug=True)

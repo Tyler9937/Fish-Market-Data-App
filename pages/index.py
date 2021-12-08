@@ -17,23 +17,25 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Your Value Proposition
+            ## Looking into Hypothesis Testing and Regression
 
-            Emphasize how the app will benefit users. Don't emphasize the underlying technology.
+            In this web application using the Fish Market Dataset created by Aung Pyae, we explore the key concepts of hypothesis testing as well as linear regression and understanding the R-squared value 
 
-            ✅ RUN is a running app that adapts to your fitness levels and designs personalized workouts to help you improve your running.
-
-            ❌ RUN is the only intelligent running app that uses sophisticated deep neural net machine learning to make your run smarter because we believe in ML driven workouts.
-
+            This application walks you through the process of how the linear regression model was created. Describe the insights that were found. As well as provide an interactive tool for view model predictions
+            
             """
         ),
-        dcc.Link(dbc.Button('Your Call To Action', color='primary'), href='/predictions')
+        dcc.Link(dbc.Button('View Model', color='primary'), href='/predictions')
     ],
     md=4,
 )
 
 df = pd.read_csv('./data/Fish.csv')
-fig = px.scatter(df, x='Length3', y='Weight')
+fig = px.scatter(df, x='Length3', y='Weight', labels={
+                                                "Weight": "Fish Weight (grams)",
+                                                "Length3": "Fish Cross Length (cm)"
+                                            },)
+
 
 column2 = dbc.Col(
     [
