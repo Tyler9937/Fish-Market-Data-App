@@ -21,7 +21,7 @@ column1 = dbc.Col(
 
             In this web application using the Fish Market Dataset created by Aung Pyae, we explore the key concepts of hypothesis testing as well as linear regression and understanding the R-squared value 
 
-            This application walks you through the process of how the linear regression model was created. Describe the insights that were found. As well as provide an interactive tool for view model predictions
+            This application walks you through the process of how the linear regression model was created. Describe the insights that were found. As well as provide an interactive tool for viewing model predictions
             
             """
         ),
