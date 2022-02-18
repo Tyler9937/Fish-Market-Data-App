@@ -1,6 +1,6 @@
 # Imports from 3rd party libraries
 import dash_bootstrap_components as dbc
-import dash_core_components as dcc
+from dash import dcc
 
 # Imports from this application
 from app import app
