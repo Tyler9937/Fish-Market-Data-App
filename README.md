@@ -2,13 +2,13 @@
 
 ### Introduction
 
-The Fish Dimension Regression Analysis repo aims to preform statistical analysis on the given fish market dataset. The analysis involves hypothesis testing and preforming a multi-dimentional linear regression on the dataset.
+The Fish Dimension Regression Analysis repo aims to perform statistical analysis on the given fish market dataset. The analysis involves hypothesis testing and performing a multi-dimensional linear regression on the dataset.
 
 ### Usage
 
 **Interactive Web Application**
 
-A Dash web application has been created on Heroku servers to demonstrate the linear regression (Ordianry Least Sqaured) predictive model. The interactive model takes user inputs on a given fish’s vertical length, diagonal length, horizontal length, height, width and predicts a target fish weight.
+A Dash web application has been created on Heroku servers to demonstrate the linear regression (Ordinary Least Squared) predictive model. The interactive model takes user inputs on a given fish’s vertical length, diagonal length, horizontal length, height, width and predicts a target fish weight.
 
 The interactive web application can be found [Here](https://fish-market-dataset-analysis.herokuapp.com/)
 
@@ -16,7 +16,7 @@ The interactive web application can be found [Here](https://fish-market-dataset-
 
 **The Dataset**
 
-The dataset includes seven features containing categorical and numerical data on fish species, weight, and five length measurements. The dataset was created by Aung Pyae and is hosted on the website [kaggle.com](https://www.kaggle.com/aungpyaeap/fish-market). The dataset is optimal for regression modeling as there is strong correlation between fish length and fish weight. During linear regression analysis the “Weight” feature is used as the target feature.
+The dataset includes seven features containing categorical and numerical data on fish species, weight, and five length measurements. The dataset was created by Aung Pyae and is hosted on the website [kaggle.com](https://www.kaggle.com/aungpyaeap/fish-market). The dataset is optimal for regression modeling as there is a strong correlation between fish length and fish weight. During linear regression analysis, the “Weight” feature is used as the target feature.
 
 **Features**
 
@@ -95,7 +95,7 @@ Kurtosis:                      10.561   Cond. No.                     1.33e+04
 
 **Hypothesis Testing Market Fish Versus Wild Fish**
 
-Hypothesis testing to see if the sample data collected on fish available in markets has a statistically significant diffrence from the population of fish in the wild.
+Hypothesis testing to see if the sample data collected on fish available in markets has a statistically significant difference from the population of fish in the wild.
 
 **Initial Hypothesis**
 
