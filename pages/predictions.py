@@ -19,28 +19,28 @@ model = ols('Weight ~ Volume + Length1 + Length2 + Length3 + Height + Width', da
 length1_slider = html.Div(
     [
         dbc.Label("Vertical Length (cm)", html_for="slider"),
-        dcc.Slider(id="length1_slider", min=8, max=60, step=1, value=20, tooltip={"placement": "bottom", "always_visible": True}),  
+        dcc.Slider(id="length1_slider", min=10, max=60, step=5, value=20, tooltip={"placement": "bottom", "always_visible": True}),  
     ]
 )
 
 length2_slider = html.Div(
     [
         dbc.Label("Diagonal Length (cm)", html_for="slider"),
-        dcc.Slider(id="length2_slider", min=9, max=65, step=1, value=25, tooltip={"placement": "bottom", "always_visible": True}),  
+        dcc.Slider(id="length2_slider", min=10, max=65, step=5, value=25, tooltip={"placement": "bottom", "always_visible": True}),  
     ]
 )
 
 length3_slider = html.Div(
     [
         dbc.Label("Length (cm)", html_for="slider"),
-        dcc.Slider(id="length3_slider", min=9, max=70, step=1, value=30, tooltip={"placement": "bottom", "always_visible": True}),  
+        dcc.Slider(id="length3_slider", min=10, max=70, step=5, value=30, tooltip={"placement": "bottom", "always_visible": True}),  
     ]
 )
 
 height_slider = html.Div(
     [
         dbc.Label("Height (cm)", html_for="slider"),
-        dcc.Slider(id="height_slider", min=2, max=20, step=1, value=11, tooltip={"placement": "bottom", "always_visible": True}),  
+        dcc.Slider(id="height_slider", min=5, max=20, step=1, value=11, tooltip={"placement": "bottom", "always_visible": True}),  
     ]
 )
 
