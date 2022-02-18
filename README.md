@@ -12,7 +12,9 @@ The Fish Dimension Regression Analysis repo aims to preform statistical analysis
 
 **Interactive Web Application**
 
-A Dash web application has been created on Heroku servers to demonstrate the linear regression (Ordianry Least Sqaured) predictive model. The interactive model takes user inputs on a given fish’s vertical length, diagonal length, horizontal length, height, width and predicts a target fish weight. 
+A Dash web application has been created on Heroku servers to demonstrate the linear regression (Ordianry Least Sqaured) predictive model. The interactive model takes user inputs on a given fish’s vertical length, diagonal length, horizontal length, height, width and predicts a target fish weight.
+
+The interactive web application can be found [Here](https://fish-market-dataset-analysis.herokuapp.com/)
 
 # Overview of Statistical Analysis on Dataset
 
@@ -20,15 +22,16 @@ A Dash web application has been created on Heroku servers to demonstrate the lin
 
 The dataset includes seven features containing categorical and numerical data on fish species, weight, and five length measurements. The dataset was created by Aung Pyae and is hosted on the website [kaggle.com](https://www.kaggle.com/aungpyaeap/fish-market). The dataset is optimal for regression modeling as there is strong correlation between fish length and fish weight. During linear regression analysis the “Weight” feature is used as the target feature.
 
-Features:
+**Features**
 
-Species (str): The type of fish
-Weight (int): The recorded Weight of the fish in grams (g)
-Length1 (int): Vertical length in centimeters (cm)
-Length2 (int): Diagonal length in centimeters (cm)
-Length3 (int): Cross length in centimeters (cm)
-Height (int): Height in centimeters (cm)
-Width (int): Diagonal width in centimeters (cm)
+- Species (str): The type of fish
+- Weight (int): The recorded Weight of the fish in grams (g)
+- Length1 (int): Vertical length in centimeters (cm)
+- Length2 (int): Diagonal length in centimeters (cm)
+- Length3 (int): Cross length in centimeters (cm)
+- Height (int): Height in centimeters (cm)
+- Width (int): Diagonal width in centimeters (cm)
+
 
  **Weight Distribution**
 
@@ -48,13 +51,13 @@ Using the features “Length3”, ”Height”, and “Width” a feature “Vol
 
 **Hypothesis Testing**
 
-Null Hypothesis:
+**Null Hypothesis:**
 
-The coefficient of our compared features to target will be equal to zero
+- The coefficient of our compared features to target will be equal to zero
 
-Alternative Hypothesis:
+**Alternative Hypothesis:**
 
-The coefficient of our compared features to target will not be equal to zero
+- The coefficient of our compared features to target will not be equal to zero
 
 **Graphed Linear Regression and 95% Confidence Intervale**
 
@@ -100,13 +103,13 @@ Hypothesis testing to see if the sample data collected on fish available in mark
 
 **Initial Hypothesis**
 
-Null Hypothesis:
+**Null Hypothesis:**
 
-The species market sample weight will be related to the species population as a whole weight
+- The species market sample weight will be related to the species population as a whole weight
 
-Alternative Hypothesis:
+**Alternative Hypothesis:**
 
-The species market sample weight will **not** be related to the species population sample weight
+- The species market sample weight will **not** be related to the species population sample weight
 
 Setting a p-value threshold of 5%, 0.05
 
@@ -116,22 +119,22 @@ Using only Perch and Bream fish since their samples are each over 30
 
 In the case of the Bream Fish sample weight versus the Bream Fish population weight:
 
-t-score: ~ -25.22
-p-value: ~ 1.34e-23
+- t-score: ~ -25.22
+- p-value: ~ 1.34e-23
 
 The p-value is less than 0.05. We reject the null hypothesis showing there is a statistically significant difference between the mean weights
 
 In the case of the Perch Fish sample weight versus the Perch Fish population weight:
 
- t-score: ~ -14.48
-p-value: ~ 0.00049
+- t-score: ~ -14.48
+- p-value: ~ 0.00049
 
 The p-value is less than 0.05. We reject the null hypothesis showing there is a statistically significant difference between the mean weights
 
 In the case of the Perch Fish sample weight versus the Bream Fish sample weight:
 
- t-score: ~ -3.61
- p-value: ~ 0.00049
+- t-score: ~ -3.61
+- p-value: ~ 0.00049
 
 The p-value was less than 0.05. We reject the null hypothesis showing there is a statistically significant difference between the mean weights
 
