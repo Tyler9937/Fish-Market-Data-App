@@ -4,10 +4,6 @@
 
 The Fish Dimension Regression Analysis repo aims to preform statistical analysis on the given fish market dataset. The analysis involves hypothesis testing and preforming a multi-dimentional linear regression on the dataset.
 
-**Gallery**
-
-![pairplot](assets/pairplot.png "pairplot")
-
 ### Usage
 
 **Interactive Web Application**
@@ -35,19 +31,19 @@ The dataset includes seven features containing categorical and numerical data on
 
  **Weight Distribution**
 
- ![Weight Distribution](assets/weight_distribution.png "Weight Distribution")
+ ![Weight Distribution](assets/img/weight_distribution.png "Weight Distribution")
 
 **Central Limit Theorem and Effect on Weight Distribution**
 
-![CLT](assets/clt.png "CLT")
+![CLT](assets/img/clt.png "CLT")
 
 **Dimensionality Reduction**
 
 Using the features “Length3”, ”Height”, and “Width” a feature “Volume” can be created that has a strong correlation to fish weight. Additionally, a higher R2 score is achieved with the addition of the “Volume” feature as it explains more variation around the mean when compared to the other features individually.
 
-![linear1](assets/linear1.png "linear1")
+![linear1](assets/img/linear1.png "linear1")
 
-![linear2](assets/linear2.png "linear2")
+![linear2](assets/img/linear2.png "linear2")
 
 **Hypothesis Testing**
 
@@ -61,7 +57,7 @@ Using the features “Length3”, ”Height”, and “Width” a feature “Vol
 
 **Graphed Linear Regression and 95% Confidence Intervale**
 
-![ci](assets/ci.png "ci")
+![ci](assets/img/ci.png "ci")
 
 **Inference for Linear Regression**
 

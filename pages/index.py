@@ -1,28 +1,17 @@
-# Imports from 3rd party libraries
-import dash
 import dash_bootstrap_components as dbc
 from dash import dcc
-from dash import html
-from dash.dependencies import Input, Output
 import plotly.express as px
 import pandas as pd
 
-# Imports from this application
-from app import app
 
-# 2 column layout. 1st column width = 4/12
-# https://dash-bootstrap-components.opensource.faculty.ai/l/components/layout
+# Column to display text
 column1 = dbc.Col(
     [
         dcc.Markdown(
             """
-        
-            ## Looking into Hypothesis Testing and Regression
+            ### Looking into Linear Regression
 
-            In this web application using the Fish Market Dataset created by Aung Pyae, we explore the key concepts of hypothesis testing as well as linear regression and understanding the R-squared value 
-
-            This application walks you through the process of how the linear regression model was created. Describe the insights that were found. As well as provide an interactive tool for viewing model predictions
-            
+            This web application is a demonstration of the linear regression model (Ordinary Least Squares) implemented as part of the Fish Dimension Regression Analysis.
             """
         ),
         dcc.Link(dbc.Button('View Model', color='primary'), href='/predictions')
@@ -30,17 +19,19 @@ column1 = dbc.Col(
     md=4,
 )
 
-df = pd.read_csv('./data/Fish.csv')
+# Creating plotly graph
+df = pd.read_csv('./assets/data/Fish.csv')
 fig = px.scatter(df, x='Length3', y='Weight', labels={
                                                 "Weight": "Fish Weight (grams)",
                                                 "Length3": "Fish Cross Length (cm)"
                                             },)
 
-
+# Column to display grpah
 column2 = dbc.Col(
     [
         dcc.Graph(figure=fig),
     ]
 )
 
+# Layout for rendering to web app
 layout = dbc.Row([column1, column2])

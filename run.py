@@ -1,16 +1,15 @@
-# Imports from 3rd party libraries
-import dash
 from dash import dcc
 from dash import html
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
 
-# Imports from this application
 from app import app, server
-from pages import index, predictions, insights, process
+from pages import index, predictions
 
+
+# Navebar for header of app
 navbar = dbc.NavbarSimple(
-    brand='Fish Market Data Analysis',
+    brand='Fish Dimensions Regression Analysis',
     brand_href='/', 
     children=[
         dbc.NavItem(dcc.Link('Predictions', href='/predictions', className='nav-link')), 
@@ -22,7 +21,6 @@ navbar = dbc.NavbarSimple(
     light=True, 
     dark=False
 )
-
 
 # The footer at the bottom of the screen
 footer = dbc.Container(
@@ -73,7 +71,6 @@ footer = dbc.Container(
     )
 )
 
-
 app.layout = html.Div([
     dcc.Location(id='url', refresh=False), 
     navbar, 
@@ -82,8 +79,7 @@ app.layout = html.Div([
     footer
 ])
 
-
-# URL Routing for Multi-Page Apps: https://dash.plot.ly/urls
+# URL Routing for Multi-Page Apps
 @app.callback(Output('page-content', 'children'),
               [Input('url', 'pathname')])
 def display_page(pathname):
@@ -91,13 +87,8 @@ def display_page(pathname):
         return index.layout
     elif pathname == '/predictions':
         return predictions.layout
-    elif pathname == '/insights':
-        return insights.layout
-    elif pathname == '/process':
-        return process.layout
     else:
         return dcc.Markdown('## Page not found')
-
 
 # Run app
 if __name__ == '__main__':

@@ -1,18 +1,15 @@
-# Imports from 3rd party libraries
 import dash_bootstrap_components as dbc
 from dash import dcc
 from dash import html
 from dash.dependencies import Input, Output
-
 import pandas as pd
 from statsmodels.formula.api import ols
 
-# Imports from this application
 from app import app
 
 
 # Importing data and fitting the model
-df = pd.read_csv('./data/Fish.csv')
+df = pd.read_csv('./assets/data/Fish.csv')
 df['Volume'] = df['Length3'] * df['Height'] * df['Width']
 model = ols('Weight ~ Volume + Length1 + Length2 + Length3 + Height + Width', data=df).fit()
 
@@ -54,6 +51,7 @@ width_slider = html.Div(
 )
 
 
+# Column for displaying text and input sliders
 column1 = dbc.Col(
     [
         dcc.Markdown(
@@ -76,7 +74,7 @@ column1 = dbc.Col(
     md=4,
 )
 
-
+# Column for displaying predicated fish weight
 column2 = dbc.Col(
     [
         html.H1("Estimated Fish Weight...", style={"text-align": "center", "color": "rgb(108,108,108)"}),
@@ -94,7 +92,9 @@ layout = dbc.Row([column1, column2])
      Input("height_slider", "value"),
      Input("width_slider", "value")],
 )
+
 def display_page(length1, length2, length3, height, width):
+    '''Outputs predicted fish wight given user inputs'''
 
     volume = length3 * height * width
     data = {'Length1': [length1],
