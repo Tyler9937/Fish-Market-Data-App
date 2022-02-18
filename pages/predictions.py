@@ -1,7 +1,7 @@
 import dash
 import dash_bootstrap_components as dbc
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import dcc
+from dash import html
 from dash.dependencies import Input, Output
 import pandas as pd
 from statsmodels.formula.api import ols
@@ -57,7 +57,6 @@ column1 = dbc.Col(
     [
         dcc.Markdown(
             """
-
             ## Predictions
 
             This application allows you to predict fish weight (g) given length (cm) measurements.
