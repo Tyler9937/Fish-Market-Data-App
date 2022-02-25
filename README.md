@@ -20,44 +20,43 @@ The dataset includes seven features containing categorical and numerical data on
 
 **Features**
 
-- Species (str): The type of fish
-- Weight (int): The recorded Weight of the fish in grams (g)
-- Length1 (int): Vertical length in centimeters (cm)
-- Length2 (int): Diagonal length in centimeters (cm)
-- Length3 (int): Cross length in centimeters (cm)
-- Height (int): Height in centimeters (cm)
-- Width (int): Diagonal width in centimeters (cm)
-
+-	Species (str): The type of fish
+-	Weight (int): The recorded Weight of the fish in grams (g)
+-	Length1 (int): Vertical length in centimeters (cm)
+-	Length2 (int): Diagonal length in centimeters (cm)
+-	Length3 (int): Cross length in centimeters (cm)
+-	Height (int): Height in centimeters (cm)
+-	Width (int): Diagonal width in centimeters (cm)
 
  **Weight Distribution**
 
- ![Weight Distribution](assets/img/weight_distribution.png "Weight Distribution")
+ ![Weight Distribution](assets/weight_distribution.png "Weight Distribution")
 
 **Central Limit Theorem and Effect on Weight Distribution**
 
-![CLT](assets/img/clt.png "CLT")
+![CLT](assets/clt.png "CLT")
 
 **Dimensionality Reduction**
 
 Using the features “Length3”, ”Height”, and “Width” a feature “Volume” can be created that has a strong correlation to fish weight. Additionally, a higher R2 score is achieved with the addition of the “Volume” feature as it explains more variation around the mean when compared to the other features individually.
 
-![linear1](assets/img/linear1.png "linear1")
+![linear1](assets/linear1.png "linear1")
 
-![linear2](assets/img/linear2.png "linear2")
+![linear2](assets/linear2.png "linear2")
 
 **Hypothesis Testing**
 
 **Null Hypothesis:**
 
-- The coefficient of our compared features to target will be equal to zero
+-	The coefficient of our compared features to target will be equal to zero
 
 **Alternative Hypothesis:**
 
-- The coefficient of our compared features to target will not be equal to zero
+-	The coefficient of our compared features to target will not be equal to zero
 
 **Graphed Linear Regression and 95% Confidence Intervale**
 
-![ci](assets/img/ci.png "ci")
+![ci](assets/ci.png "ci")
 
 **Inference for Linear Regression**
 
@@ -73,8 +72,8 @@ Date:                Tue, 07 Dec 2021   Prob (F-statistic):          1.22e-104
 Time:                        17:27:19   Log-Likelihood:                -901.52
 No. Observations:                 159   AIC:                             1817.
 Df Residuals:                     152   BIC:                             1839.
-Df Model:                           6                                         
-Covariance Type:            nonrobust                                         
+Df Model:                           6                                        
+Covariance Type:            nonrobust                                        
 ==============================================================================
                 coef    std err          t      P>|t|      [0.025      0.975]
 ------------------------------------------------------------------------------
@@ -92,7 +91,6 @@ Skew:                           1.131   Prob(JB):                     2.53e-90
 Kurtosis:                      10.561   Cond. No.                     1.33e+04
 ==============================================================================
 ```
-
 **Hypothesis Testing Market Fish Versus Wild Fish**
 
 Hypothesis testing to see if the sample data collected on fish available in markets has a statistically significant difference from the population of fish in the wild.
@@ -101,11 +99,11 @@ Hypothesis testing to see if the sample data collected on fish available in mark
 
 **Null Hypothesis:**
 
-- The species market sample weight will be related to the species population as a whole weight
+-	The species market sample weight will be related to the species population as a whole weight
 
 **Alternative Hypothesis:**
 
-- The species market sample weight will **not** be related to the species population sample weight
+-	The species market sample weight will **not** be related to the species population sample weight
 
 Setting a p-value threshold of 5%, 0.05
 
@@ -115,22 +113,22 @@ Using only Perch and Bream fish since their samples are each over 30
 
 In the case of the Bream Fish sample weight versus the Bream Fish population weight:
 
-- t-score: ~ -25.22
-- p-value: ~ 1.34e-23
+-	t-score: ~ -25.22
+-	p-value: ~ 1.34e-23
 
 The p-value is less than 0.05. We reject the null hypothesis showing there is a statistically significant difference between the mean weights
 
 In the case of the Perch Fish sample weight versus the Perch Fish population weight:
 
-- t-score: ~ -14.48
-- p-value: ~ 0.00049
+-	t-score: ~ -14.48
+-	p-value: ~ 0.00049
 
 The p-value is less than 0.05. We reject the null hypothesis showing there is a statistically significant difference between the mean weights
 
 In the case of the Perch Fish sample weight versus the Bream Fish sample weight:
 
-- t-score: ~ -3.61
-- p-value: ~ 0.00049
+-	t-score: ~ -3.61
+-	p-value: ~ 0.00049
 
 The p-value was less than 0.05. We reject the null hypothesis showing there is a statistically significant difference between the mean weights
 
