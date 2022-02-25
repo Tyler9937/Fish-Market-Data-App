@@ -10,6 +10,9 @@ The Fish Dimension Regression Analysis repo aims to perform statistical analysis
 
 A Dash web application has been created on Heroku servers to demonstrate the linear regression (Ordinary Least Squared) predictive model. The interactive model takes user inputs on a given fish’s vertical length, diagonal length, horizontal length, height, width and predicts a target fish weight.
 
+
+**Please allow roughly 30 seconds for the server to boot up when clicking the link below**
+
 The interactive web application can be found [Here](https://fish-market-dataset-analysis.herokuapp.com/)
 
 # Overview of Statistical Analysis on Dataset
